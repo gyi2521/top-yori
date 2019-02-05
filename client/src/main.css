@@ -1,0 +1,184 @@
+.app{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 98vh;
+    text-align: center;
+    vertical-align: center;
+}
+.app .bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/GeorgiaTech.jpg");
+    background-size: cover;
+    background-position: bottom;
+    opacity: .7;
+}
+
+.headerBar{
+    padding: 5px;
+    background-color: #3e3f3a;
+    width:100%;
+    height: 42px;
+    color: white;
+    
+}
+
+.headerName{
+    font-family: 'Lobster', cursive;
+    color: #ddd;
+    font-size: 26px;
+    padding: 5px;
+    float: left;
+    margin-left: 10px;
+}
+
+.headerLogin{
+    color:#ddd;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    float: right;
+    margin-right: 10px;
+}
+
+.searchDish{ 
+    margin-top: 2%;
+} 
+.newDishLink{ 
+    margin-top: 5px;
+    color:#eee !important;
+    text-decoration: underline;
+}
+
+.white{
+    color: white;
+}
+
+.background-sage{
+    margin-top: 3px;
+    padding-top: 3px;
+    background-color: rgb(225,233,238);
+}
+
+  .column {
+    float: left;
+    width: 20%;
+    padding: 0px 5px;      
+  }
+  .row {
+      width: 100%;
+      position: fixed;
+      bottom:0;
+  }
+  .dishCardContent {
+      width: 90%;
+      margin: auto;
+  }
+
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 5px; 
+    margin-bottom: 5px; 
+  }
+  
+  .cardImage{
+    height: 145px;
+  }
+  .cardImage:hover {
+    background-color:#ddd;  
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev {
+      left: 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .linkNewDish {
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #3e3f3a;
+  }
+  .linkNewDish:hover {
+      color: black;
+      cursor: pointer; 
+  }
+
+  .sageBackground {
+    background-color: #96b880;
+  }
+
+  .inputStyle {
+      margin: 5px;
+      padding: 3px;
+      width: 500px;
+  }
+
+  .topYoriTitle{
+      display: inline-block;
+      padding: 3px;
+      width: 89%;
+      color: white;
+      font-size: 16px;
+      font-weight: bold; 
+      background-color:#909598 ;
+ 
+  }
+  .clearButton{
+    background-color: Transparent;
+    border: none;
+    outline:none;
+  }
+
+  a:hover {
+      color: white;
+  }
+
+  .chip {
+    background-Color: #96b880;
+    border: 1px solid #F7F7F7;
+    color: #F7F7F7;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .chip:focus, .chip:hover{
+    background-color: #657a56;
+    outline: none;
+    cursor: pointer;
+  }
+
+  
+
+
+
+
+
