@@ -17,9 +17,12 @@ if (process.env.NODE_ENV === "production") {
 require("./routes/api-routes")(app);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactDishApp");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactDishApp");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password12@ds141043.mlab.com:41043/heroku_zzcz8hmq")
+//mongoose.connect('mongodb://gyi:NamJee01@ds121282.mlab.com:21282/heroku_js7qh2wp', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://gina:NamJee1@ds141043.mlab.com:41043/heroku_zzcz8hmq");
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
