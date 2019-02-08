@@ -9,6 +9,12 @@ const DishSchema = new Schema({
   restaurant: {
     type: String
   },
+  phone: {
+    type: String
+  },
+  address: {
+    type: String
+  },
   image: {
     type: String,
     default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCCuh28gO5any9RjETQvdVKu5-nXDHZX7WnBQCpuXa4CEqI4Hebw'
@@ -19,9 +25,12 @@ const DishSchema = new Schema({
   keyword: {
     type: String
   },
-  rating: {
-    type: Number,
-    default: 3
+  reviews: [{
+    type: Schema.Types.ObjectId,
+    ref: "Review"
+  }],
+  description: {
+    type: String
   }
 });
 
