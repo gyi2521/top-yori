@@ -56,7 +56,6 @@ class App extends Component {
 
   inputHandleClick = event => {
     //event.preventDefault();
-    //console.log('hey');
     //console.log(this.state.newDish);
     $.post("/api/dish", this.state.newDish).then(result => {
       console.log("/api/dish", this.state.newDish);
@@ -149,6 +148,7 @@ class App extends Component {
         />
         <SearchResult searchResult={this.state.searchResult} />
       </div>
+
     );
   }
 }

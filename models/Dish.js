@@ -29,6 +29,10 @@ const DishSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Review"
   }],
+  rating: {
+    type: Number,
+    default: 0
+  },
   description: {
     type: String
   }

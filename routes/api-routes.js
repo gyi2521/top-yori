@@ -18,7 +18,7 @@ module.exports = function (app) {
     db.Dish.find(filterDish)
       // .populate("reviews", "rating")
       .sort({ rating: -1 })
-      // .limit(10)
+      //.limit(10)
       .then(function (dishList) {
         //console.log(data);
         res.json(dishList);
@@ -52,13 +52,21 @@ module.exports = function (app) {
   });
 
   app.post("/api/review", function (req, res) {
-    console.log("hello", req.body);
+    let reviewId = null;
     db.Review.create(req.body.review)
       .then(function (review) {
-        return db.Dish.findOneAndUpdate({ _id: req.body.dishId }, { $push: { reviews: review._id } }, { new: true })
+        reviewId = review._id
+        return db.Dish.find({ _id: req.body.dishId }).populate("reviews", "rating").select("reviews -_id");
+      }).then(function (dishReviews) {
+        let ratingCount = dishReviews[0]["reviews"].length + 1;
+        var totalRatings = dishReviews[0]["reviews"].reduce(function (accumulator, rating) {
+          return accumulator + rating.rating;
+        }, 0);
+        let avgRatings = (totalRatings + req.body.review.rating) / ratingCount;
+        return db.Dish.findOneAndUpdate({ _id: req.body.dishId }, { $set: { rating: avgRatings }, $push: { reviews: reviewId } }, { new: true })
       })
-      .then(function (data) {
-        res.json(data);
+      .then(function (dish) {
+        res.json(dish);
       })
       .catch(function (err) {
         res.json(err);
