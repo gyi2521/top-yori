@@ -6,11 +6,11 @@
   "dependencies": {
     "axios": "^0.18.1",
     "google-map-react": "^1.1.2",
+    "lodash": "^4.17.20",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1",
-    "semantic-ui-react": "^0.84.0",
-    "lodash": "^4.17.13"
+    "semantic-ui-react": "^0.84.0"
   },
   "scripts": {
     "start": "react-scripts start",
