@@ -18,7 +18,9 @@ require("./routes/api-routes")(app);
 
 // Connect to the Mongo DB
 //mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactDishApp");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://gina:NamJee1@ds141043.mlab.com:41043/heroku_zzcz8hmq");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://gina:NamJee1@ds141043.mlab.com:41043/heroku_zzcz8hmq");
+//New connection string to MongoDBAtlas --mlab no longer available on Heroku
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://gyi:NamJee01@clustertopyori.kpdbq.mongodb.net/heroku_zzcz8hmq?retryWrites=true&w=majority");
 
 // Start the API server
 app.listen(PORT, function () {
